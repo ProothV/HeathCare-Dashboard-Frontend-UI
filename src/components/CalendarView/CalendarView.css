@@ -1,0 +1,148 @@
+.calendar-view {
+  background-color: #FFFFFF;
+  padding: 24px; 
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.calendar-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.navigation-arrows {
+  display: flex;
+  gap: 8px;
+  color: #666;
+}
+
+.calendar-grid {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.calendar-day {
+  flex: 1;
+  text-align: center;
+}
+
+.day-header {
+  display: flex;
+  flex-direction: column;
+  background-color: #E3F0FF;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.day-header.highlighted {
+  background-color: #1E90FF;
+  color: #FFFFFF;
+}
+
+.day-header span:first-child {
+  font-size: 14px;
+}
+
+.day-header span:last-child {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.time-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.time-slot {
+  display: block;
+  font-size: 12px;
+  color: #1E90FF;
+}
+
+.time-slot.highlight-slot {
+  background-color: #1E90FF;
+  color: #FFFFFF;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.time-slot.ice-light-blue {
+  background-color: #E3F0FF;
+  color: #1E90FF;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.calendar-appointments {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.appointment-card {
+  display: flex;
+  gap: 12px;
+  background-color: #F5F9FF;
+  padding: 16px; /* Increased padding */
+  border-radius: 12px;
+}
+
+.appointment-card.highlighted {
+  background-color: #1E90FF;
+  color: #FFFFFF;
+}
+
+.appointment-card.highlighted .appointment-info h3,
+.appointment-card.highlighted .appointment-info p {
+  color: #FFFFFF;
+}
+
+.appointment-image {
+  width: 24px;
+  height: 24px;
+}
+
+.appointment-icon {
+  color: #333;
+}
+
+.appointment-card.highlighted .appointment-icon {
+  color: #FFFFFF;
+}
+
+.appointment-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.appointment-info p {
+  font-size: 12px;
+  color: #666;
+  margin: 4px 0 0;
+}
+
+@media (max-width: 768px) {
+  .calendar-grid {
+    flex-direction: column;
+  }
+
+  .calendar-appointments {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-header h2 {
+    font-size: 16px;
+  }
+}

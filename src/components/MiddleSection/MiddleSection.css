@@ -1,0 +1,33 @@
+.middle-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #FFFFFF; 
+}
+
+.middle-content {
+  flex: 1;
+  padding: 24px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px;
+}
+
+@media (max-width: 1024px) {
+  .middle-section {
+    height: auto;
+  }
+
+  .middle-content {
+    padding: 16px;
+  }
+
+  .dashboard-title {
+    font-size: 20px;
+  }
+}
